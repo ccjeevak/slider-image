@@ -1,0 +1,104 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+}
+
+header .logo {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+header .toggle {
+  background: url(assets/menu.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.slider {
+  position: relative; 
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.slider .img-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  clip-path: circle(0 at center);
+  transition: 0.1s;
+  transition-duration: 0s;
+}
+
+.slider .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .img-box  .content-box {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+}
+
+.slider .img-box .content-box h2 {
+  font-size: 6em;
+  line-height: 1em;
+  color: #fff;
+}
+
+.slider .img-box .content-box p {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.slider .img-box .content-box a {
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 20px;
+  position: relative;
+}
+
+.slider input[type="radio"] {
+  position: relative;
+  z-index: 1000;
+  outline: none;
+  cursor: pointer;
+  margin: 5px;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.slider input[type="radio"]:checked + .img-box {
+  z-index: 10;
+  transition-duration: 0.7s;
+  clip-path: circle(1000px at center);
+  
+;}
